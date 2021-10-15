@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   PlusCircleIcon,
   PaperAirplaneIcon,
@@ -34,10 +35,12 @@ class Header extends Component {
         <div className="flex justify-between max-w-6xl mx-5 xl:mx-auto">
           {/* Left */}
           <div className="relative items-center inline-grid w-24 cursor-pointer ">
-            <img
-              className="h-10 rounded-full cursor-pointer btn"
-              src="./../profile.jpeg"
+            <Image
+              className="rounded-full cursor-pointer"
+              src="http://chayugadesigns.com/images/profile-2.jpg"
               alt="Profile Picture"
+              height="56px"
+              width="56px"
             />
           </div>
 
