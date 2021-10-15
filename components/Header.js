@@ -36,7 +36,7 @@ class Header extends Component {
           <div className="relative items-center inline-grid w-24 cursor-pointer ">
             <img
               className="h-10 rounded-full cursor-pointer btn"
-              src="./images/profile.jpeg"
+              src="./../profile.jpeg"
               alt="Profile Picture"
             />
           </div>
