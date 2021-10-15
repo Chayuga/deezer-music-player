@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Header from "../components/Header";
-import Main from "../components/Main";
+import MusicHome from "../components/MusicHome";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Main />
+      <MusicHome />
     </div>
   );
 }

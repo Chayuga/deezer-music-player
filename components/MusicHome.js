@@ -7,8 +7,9 @@ import {
 } from "@heroicons/react/outline";
 
 import Link from "next/link";
+import SearchBar from "./SearchBar";
 
-class Albums extends Component {
+class MusicHome extends Component {
   state = {
     albums: [],
   };
@@ -19,6 +20,15 @@ class Albums extends Component {
       })
     );
   }
+
+  searchAlbums = (term) => {
+    actions.getAlbums(term).then((item) =>
+      this.setState({
+        albums: item,
+      })
+    );
+  };
+
   renderAlbums = () => {
     const { albums } = this.state;
     return albums && albums.length
@@ -75,11 +85,14 @@ class Albums extends Component {
   render() {
     console.log(this.state);
     return (
-      <div className="flex justify-between max-w-6xl mx-5  xl:mx-auto pt-2 flex-wrap">
-        {this.renderAlbums()}
+      <div className="max-w-6xl xl:mx-auto">
+        <SearchBar searchAlbums={this.searchAlbums} />
+        <div className="flex justify-between max-w-6xl mx-5  xl:mx-auto pt-2 flex-wrap">
+          {this.renderAlbums()}
+        </div>
       </div>
     );
   }
 }
 
-export default Albums;
+export default MusicHome;
