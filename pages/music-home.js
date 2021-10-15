@@ -5,9 +5,8 @@ import {
   MusicNoteIcon,
   ViewBoardsIcon,
 } from "@heroicons/react/outline";
-
 import Link from "next/link";
-import SearchBar from "./SearchBar";
+import SearchBar from "../components/SearchBar";
 
 class MusicHome extends Component {
   state = {
@@ -68,14 +67,12 @@ class MusicHome extends Component {
                   {item.artist.name}
                 </h1>
               </div>
-              <button
-                Link
-                to={`/album-details/${item.album.id}`}
-                type="submit"
-                className="mx-3 text-sm font-normal bg-gray-200 text-black p-2 rounded-md hover:scale-125 hover:bg-purple-600 hover:text-white transform transition-all ease-out"
-              >
-                Details
-              </button>
+
+              <Link href={`/album-details/${item.album.id}`}>
+                <a className="mx-3 text-sm font-normal bg-gray-200 text-black cursor-pointer p-2 rounded-md hover:scale-125 hover:bg-purple-600 hover:text-white transform transition-all ease-out">
+                  View Tracks
+                </a>
+              </Link>
             </div>
           </div>
         ))
@@ -85,10 +82,12 @@ class MusicHome extends Component {
   render() {
     console.log(this.state);
     return (
-      <div className="max-w-6xl xl:mx-auto">
-        <SearchBar searchAlbums={this.searchAlbums} />
-        <div className="flex justify-between max-w-6xl mx-5  xl:mx-auto pt-2 flex-wrap">
-          {this.renderAlbums()}
+      <div>
+        <div className="max-w-6xl xl:mx-auto">
+          <SearchBar searchAlbums={this.searchAlbums} />
+          <div className="flex justify-between max-w-6xl mx-5  xl:mx-auto pt-2 flex-wrap">
+            {this.renderAlbums()}
+          </div>
         </div>
       </div>
     );

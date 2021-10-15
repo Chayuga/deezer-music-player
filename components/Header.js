@@ -7,9 +7,10 @@ import {
 import * as actions from "../axios";
 import { HomeIcon } from "@heroicons/react/solid";
 import { Component } from "react";
+import Link from "next/link";
 // import SearchBar from "./SearchBar";
 
-class HeaderOld extends Component {
+class Header extends Component {
   state = {
     albums: [],
   };
@@ -37,7 +38,7 @@ class HeaderOld extends Component {
           <div className="relative items-center inline-grid cursor-pointer ">
             <Image
               className="rounded-full cursor-pointer"
-              src="http://chayugadesigns.com/images/profile-2.jpg"
+              src="https://www.chayugadesigns.com/images/profile-2.jpg"
               alt="Profile Picture"
               height="56px"
               width="56px"
@@ -49,7 +50,11 @@ class HeaderOld extends Component {
 
           {/* Right */}
           <div className="flex items-center justify-end space-x-4">
-            <HomeIcon className="navBtn" />
+            <Link href="/">
+              <a>
+                <HomeIcon className="navBtn" />
+              </a>
+            </Link>
             <MenuIcon className="h-6 md:hidden cursor-pointer " />
 
             <div className="relative navBtn">
@@ -67,4 +72,4 @@ class HeaderOld extends Component {
   }
 }
 
-export default HeaderOld;
+export default Header;

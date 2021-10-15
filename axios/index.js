@@ -18,7 +18,7 @@ export function getAlbums(search = "eminem") {
 
 export function getAlbum(id) {
   const album = request
-    .get(`album=${id}`)
+    .get(`album/${id}`)
     .then((response) => response.data)
     .catch((error) => console.log(error));
   return album;

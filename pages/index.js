@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Header from "../components/Header";
-import MusicHome from "../components/MusicHome";
+import MusicHome from "./music-home";
 
 export default function Home() {
   return (
