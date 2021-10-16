@@ -4,13 +4,17 @@ import * as actions from "../../axios/index";
 import MusicHome from "../music-home";
 
 class AlbumDetails extends Component {
+  constructor(props) {
+    super(props);
+    console.log("props here" + "here");
+  }
   state = {
     album: "",
     tracks: [],
   };
 
-  componentWillReceiveProps() {
-    actions.getAlbum(this.props.match.params.id).then((album) => {
+  componentDidMount() {
+    actions.getAlbum(this.props.id).then((album) => {
       this.setState({
         album,
         tracks: album.tracks.data,
