@@ -56,7 +56,7 @@ class MusicHome extends Component {
               <div className="flex items-center mt-4 text-gray-700 dark:text-gray-200">
                 <ViewBoardsIcon className="h-5 w-5 text-gray-500" />
 
-                <h1 className="px-2 text-sm">{item.rank}</h1>
+                <h1 className="px-2 text-sm">{item.rank} Fans</h1>
               </div>
             </div>
             <div className="flex justify-between items-center px-6 py-3 bg-gray-900 align-middle">

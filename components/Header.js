@@ -23,7 +23,7 @@ class Header extends Component {
   }
 
   // searchAlbums = (term) => {
-  //   actions.getAlbums().then((item) =>
+  //   actions.getAlbums(term).then((item) =>
   //     this.setState({
   //       albums: item,
   //     })
@@ -45,7 +45,7 @@ class Header extends Component {
             />
           </div>
 
-          {/* Middle - Search input field */}
+          {/* TODO: Add Search bar to the Header*/}
           <div>{/* <SearchBar searchAlbums={this.searchAlbums} /> */}</div>
 
           {/* Right */}
