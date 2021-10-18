@@ -47,9 +47,9 @@ class AlbumDetails extends Component {
   renderAlbum = () => {
     const { album } = this.state;
     return (
-      <div className="flex flex-wrap items-center justify-between mx-auto">
+      <div className="flex flex-wrap  justify-between">
         {/*  Cover */}
-        <div className=" px-1 md:w-3/4 lg:my-4 lg:w-1/3 ">
+        <div className=" px-1 md:w-3/4 lg:my-4 lg:w-1/3 w-[95%] mx-auto">
           {/* Cover Section*/}
           <article className=" bg-cover justify-center overflow-hidden rounded-lg shadow-lg md:w-[300px] lg:w-[500px] xl:w-[700px] h-[500px] ">
             <img
@@ -62,9 +62,9 @@ class AlbumDetails extends Component {
         </div>
         {/* END Cover*/}
         {/* Details  */}
-        <div className="rounded-lg shadow-lg ">
+        <div className="rounded-lg shadow-lg w-[95%] mx-auto ">
           <div class="container flex flex-col mx-auto w-full items-center justify-center h-[500px]">
-            <header class="flex px-4 py-5 sm:px-6 w-full justify-between leading-tight border-solid border-2 border-gray-500 dark:bg-gray-800 bg-gray-300 shadow rounded-t-md ">
+            <header class="flex px-1 py-5 sm:px-6 w-full justify-between leading-tight border-solid border-2 border-gray-500 dark:bg-gray-800  shadow rounded-t-md ">
               <div className="text-lg">
                 <h1 className="no-underline hover:underline text-black">
                   Title: {album.title}
@@ -95,7 +95,7 @@ class AlbumDetails extends Component {
     return (
       <div>
         <Header />
-        <div className="flex justify-between max-w-6xl mx-5  xl:mx-auto pt-2 flex-wrap ">
+        <div className="flex justify-between max-w-6xl mx-1 md:mx-5  xl:mx-auto pt-2 flex-wrap ">
           {this.renderAlbum()}
         </div>
       </div>
