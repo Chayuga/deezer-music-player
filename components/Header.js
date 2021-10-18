@@ -22,28 +22,24 @@ class Header extends Component {
     );
   }
 
-  // searchAlbums = (term) => {
-  //   actions.getAlbums(term).then((item) =>
-  //     this.setState({
-  //       albums: item,
-  //     })
-  //   );
-  // };
-
   render() {
     return (
       <div className="shadow-sm border-b bg-white sticky top-0 z-50 py-2">
         <div className="flex justify-between max-w-6xl mx-5 xl:mx-auto">
           {/* Left */}
-          <div className="relative items-center inline-grid cursor-pointer ">
-            <Image
-              className="rounded-full cursor-pointer"
-              src="https://www.chayugadesigns.com/images/profile-2.jpg"
-              alt="Profile Picture"
-              height="56px"
-              width="56px"
-            />
-          </div>
+          <Link href="/">
+            <a>
+              <div className="relative items-center inline-grid cursor-pointer ">
+                <Image
+                  className="rounded-full cursor-pointer"
+                  src="https://www.chayugadesigns.com/images/profile-2.jpg"
+                  alt="Profile Picture"
+                  height="56px"
+                  width="56px"
+                />
+              </div>
+            </a>
+          </Link>
 
           {/* TODO: Add Search bar to the Header*/}
           <div>{/* <SearchBar searchAlbums={this.searchAlbums} /> */}</div>
