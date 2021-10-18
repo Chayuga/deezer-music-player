@@ -19,8 +19,11 @@ class SearchBar extends Component {
   render() {
     console.log(this.state);
     return (
-      <form onSubmit={(event) => this.submitSearch(event)}>
-        <div className="relative mt-1 p-2 rounded-md border-gray-500">
+      <form
+        className="sticky top-16 z-50"
+        onSubmit={(event) => this.submitSearch(event)}
+      >
+        <div className="relative mt-1 py-2 rounded-md border-gray-500">
           <button
             type="submit"
             className="absolute inset-y-0 pl-3 flex items-center pointer-cursor"
